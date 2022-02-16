@@ -10,7 +10,46 @@
 	<h2>짝수일까, 홀수일까</h2>
 
 	<script>
-	
+		var a = prompt("숫자를 입력하세요.");
+		a = Number(a);
+		// document.write(typeof a);
+		try {
+			while(a == ""){
+				a = prompt("값을 입력하세요.");
+				a = Number(a);
+				if(a != ""){
+					break;
+				}
+			}
+			while(typeof a != "number"){
+				a = prompt("숫자만 입력하세요.");
+				a = Number(a);
+				if(typeof a == "number"){
+					break;
+				}
+			}
+			while(a == ""){
+				a = prompt("값을 입력하세요.");
+				a = Number(a);
+				if(a != ""){
+					break;
+				}
+			}
+		} catch (error) {
+			
+		}
+
+		try {
+			if(a % 2 == 1){
+				document.write(a + "은(는) 홀수입니다.")
+			}
+			else{
+				document.write(a + "은(는) 짝수입니다.")
+			}
+		} catch (error) {
+			
+		}
+		// document.write(a);
 	</script>
 </body>
 </html>
